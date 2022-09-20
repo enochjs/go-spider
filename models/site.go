@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+
 	"gorm.io/gorm"
 )
 
@@ -14,14 +15,7 @@ type Site struct {
 }
 
 func CreateSite(site *Site) (err error) {
-	fmt.Printf("create site 1= %v", site)
-
-	site1 := Site{
-		Name:   "enochjs",
-		Url:    "1222",
-		Remark: "string",
-		Script: "test",
-	}
-	err = DB.Debug().Create(&site1).Error
+	fmt.Printf("create site = %v", site)
+	err = DB.Debug().Create(&site).Error
 	return err
 }

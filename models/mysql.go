@@ -12,7 +12,7 @@ var err error
 func InitDb() {
 
 	dsn := "root:123456@tcp(127.0.0.1:3306)/spider?charset=utf8mb4&parseTime=True&loc=Local"
-	DB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
+	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			//TablePrefix:   "spider_",
 			SingularTable: true,
