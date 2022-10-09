@@ -24,7 +24,7 @@ func InitDb() {
 	//迁移建表
 	DB.AutoMigrate(&Site{})
 	DB.AutoMigrate(&Book{})
-	DB.AutoMigrate(&BookResource{})
+	DB.AutoMigrate(&Resource{})
 	DB.AutoMigrate(&Chapter{})
 
 }

@@ -8,7 +8,8 @@ type Book struct {
 	gorm.Model
 	Name         string         `json:"name"`
 	Remark       string         `json:"remark"`
-	BookResource []BookResource `json:"bookResource"`
+	ResourceId 	 int
+	Resource Resource `json:"resource"`
 }
 
 func CreateBook(book *Book) (err error) {
